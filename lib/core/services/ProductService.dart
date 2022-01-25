@@ -24,19 +24,35 @@ var productRawData = [
         'color': Colors.black,
       },
       {
-        'name': 'khaki',
-        'color': Color(0xFFBCBCBC),
+        'name': 'blueGrey',
+        'color': Colors.blueGrey[200],
       },
       {
         'name': 'pink',
-        'color': Color(0xFFF5B6B6),
+        'color': Colors.pink[100],
+      },
+      {
+        'name': 'white',
+        'color': Colors.white,
       },
     ],
     'sizes': [
-      {'size': '36.0'},
-      {'size': '37.0'},
-      {'size': '38.0'},
-      {'size': '42.0'},
+      {
+        'size': '36.0',
+        'name': '36',
+      },
+      {
+        'size': '37.0',
+        'name': '37',
+      },
+      {
+        'size': '38.0',
+        'name': '38',
+      },
+      {
+        'size': '42.0',
+        'name': '42',
+      },
     ],
     'reviews': [
       {
@@ -76,19 +92,35 @@ var productRawData = [
         'color': Colors.black,
       },
       {
-        'name': 'khaki',
-        'color': Color(0xFFBCBCBC),
+        'name': 'blueGrey',
+        'color': Colors.blueGrey[200],
       },
       {
         'name': 'pink',
-        'color': Color(0xFFF5B6B6),
+        'color': Colors.pink[100],
+      },
+      {
+        'name': 'white',
+        'color': Colors.white,
       },
     ],
     'sizes': [
-      {'size': '36.0'},
-      {'size': '37.0'},
-      {'size': '38.0'},
-      {'size': '42.0'},
+      {
+        'size': '36.0',
+        'name': '36',
+      },
+      {
+        'size': '37.0',
+        'name': '37',
+      },
+      {
+        'size': '38.0',
+        'name': '38',
+      },
+      {
+        'size': '42.0',
+        'name': '42',
+      },
     ],
     'reviews': [
       {
@@ -131,19 +163,35 @@ var searchedProductRawData = [
         'color': Colors.black,
       },
       {
-        'name': 'khaki',
-        'color': Color(0xFFBCBCBC),
+        'name': 'blueGrey',
+        'color': Colors.blueGrey[200],
       },
       {
         'name': 'pink',
-        'color': Color(0xFFF5B6B6),
+        'color': Colors.pink[100],
+      },
+      {
+        'name': 'white',
+        'color': Colors.white,
       },
     ],
     'sizes': [
-      {'size': '36.0'},
-      {'size': '37.0'},
-      {'size': '38.0'},
-      {'size': '42.0'},
+      {
+        'size': '36.0',
+        'name': '36',
+      },
+      {
+        'size': '37.0',
+        'name': '37',
+      },
+      {
+        'size': '38.0',
+        'name': '38',
+      },
+      {
+        'size': '42.0',
+        'name': '42',
+      },
     ],
     'reviews': [
       {
@@ -183,19 +231,35 @@ var searchedProductRawData = [
         'color': Colors.black,
       },
       {
-        'name': 'khaki',
-        'color': Color(0xFFBCBCBC),
+        'name': 'blueGrey',
+        'color': Colors.blueGrey[200],
       },
       {
         'name': 'pink',
-        'color': Color(0xFFF5B6B6),
+        'color': Colors.pink[100],
+      },
+      {
+        'name': 'white',
+        'color': Colors.white,
       },
     ],
     'sizes': [
-      {'size': '36.0'},
-      {'size': '37.0'},
-      {'size': '38.0'},
-      {'size': '42.0'},
+      {
+        'size': '36.0',
+        'name': '36',
+      },
+      {
+        'size': '37.0',
+        'name': '37',
+      },
+      {
+        'size': '38.0',
+        'name': '38',
+      },
+      {
+        'size': '42.0',
+        'name': '42',
+      },
     ],
     'reviews': [
       {
@@ -236,19 +300,35 @@ var searchedProductRawData = [
         'color': Colors.black,
       },
       {
-        'name': 'khaki',
-        'color': Color(0xFFBCBCBC),
+        'name': 'blueGrey',
+        'color': Colors.blueGrey[200],
       },
       {
         'name': 'pink',
-        'color': Color(0xFFF5B6B6),
+        'color': Colors.pink[100],
+      },
+      {
+        'name': 'white',
+        'color': Colors.white,
       },
     ],
     'sizes': [
-      {'size': '36.0'},
-      {'size': '37.0'},
-      {'size': '38.0'},
-      {'size': '42.0'},
+      {
+        'size': '36.0',
+        'name': '36',
+      },
+      {
+        'size': '37.0',
+        'name': '37',
+      },
+      {
+        'size': '38.0',
+        'name': '38',
+      },
+      {
+        'size': '42.0',
+        'name': '42',
+      },
     ],
     'reviews': [
       {
@@ -290,19 +370,35 @@ var searchedProductRawData = [
         'color': Colors.black,
       },
       {
-        'name': 'khaki',
-        'color': Color(0xFFBCBCBC),
+        'name': 'blueGrey',
+        'color': Colors.blueGrey[200],
       },
       {
         'name': 'pink',
-        'color': Color(0xFFF5B6B6),
+        'color': Colors.pink[100],
+      },
+      {
+        'name': 'white',
+        'color': Colors.white,
       },
     ],
     'sizes': [
-      {'size': '36.0'},
-      {'size': '37.0'},
-      {'size': '38.0'},
-      {'size': '42.0'},
+      {
+        'size': '36.0',
+        'name': '36',
+      },
+      {
+        'size': '37.0',
+        'name': '37',
+      },
+      {
+        'size': '38.0',
+        'name': '38',
+      },
+      {
+        'size': '42.0',
+        'name': '42',
+      },
     ],
     'reviews': [
       {
@@ -344,19 +440,35 @@ var searchedProductRawData = [
         'color': Colors.black,
       },
       {
-        'name': 'khaki',
-        'color': Color(0xFFBCBCBC),
+        'name': 'blueGrey',
+        'color': Colors.blueGrey[200],
       },
       {
         'name': 'pink',
-        'color': Color(0xFFF5B6B6),
+        'color': Colors.pink[100],
+      },
+      {
+        'name': 'white',
+        'color': Colors.white,
       },
     ],
     'sizes': [
-      {'size': '36.0'},
-      {'size': '37.0'},
-      {'size': '38.0'},
-      {'size': '42.0'},
+      {
+        'size': '36.0',
+        'name': '36',
+      },
+      {
+        'size': '37.0',
+        'name': '37',
+      },
+      {
+        'size': '38.0',
+        'name': '38',
+      },
+      {
+        'size': '42.0',
+        'name': '42',
+      },
     ],
     'reviews': [
       {
@@ -398,19 +510,35 @@ var searchedProductRawData = [
         'color': Colors.black,
       },
       {
-        'name': 'khaki',
-        'color': Color(0xFFBCBCBC),
+        'name': 'blueGrey',
+        'color': Colors.blueGrey[200],
       },
       {
         'name': 'pink',
-        'color': Color(0xFFF5B6B6),
+        'color': Colors.pink[100],
+      },
+      {
+        'name': 'white',
+        'color': Colors.white,
       },
     ],
     'sizes': [
-      {'size': '36.0'},
-      {'size': '37.0'},
-      {'size': '38.0'},
-      {'size': '42.0'},
+      {
+        'size': '36.0',
+        'name': '36',
+      },
+      {
+        'size': '37.0',
+        'name': '37',
+      },
+      {
+        'size': '38.0',
+        'name': '38',
+      },
+      {
+        'size': '42.0',
+        'name': '42',
+      },
     ],
     'reviews': [
       {

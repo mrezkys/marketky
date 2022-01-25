@@ -3,6 +3,7 @@ import 'package:marketky/constant/app_color.dart';
 import 'package:marketky/core/model/ProductSize.dart';
 
 class SelectableCircleSize extends StatefulWidget {
+  final List<ProductSize> productSize;
   final Color selectedColor;
   final Color baseColor;
   final TextStyle selectedTextStyle;
@@ -10,6 +11,7 @@ class SelectableCircleSize extends StatefulWidget {
 
   final EdgeInsetsGeometry margin, padding;
   SelectableCircleSize({
+    @required this.productSize,
     this.margin,
     this.padding,
     this.selectedColor,
@@ -23,13 +25,6 @@ class SelectableCircleSize extends StatefulWidget {
 }
 
 class _SelectableCircleState extends State<SelectableCircleSize> {
-  List<ProductSize> productSize = [
-    ProductSize(size: '36.0', name: '36'),
-    ProductSize(size: '37.0', name: '37'),
-    ProductSize(size: '38.0', name: '38'),
-    ProductSize(size: '42.0', name: '42'),
-  ];
-
   int _selectedIndex;
 
   _change(index) {
@@ -67,7 +62,7 @@ class _SelectableCircleState extends State<SelectableCircleSize> {
         spacing: 20,
         runSpacing: 8,
         children: List.generate(
-          productSize.length,
+          widget.productSize.length,
           (index) {
             return InkWell(
               onTap: () {
@@ -82,7 +77,7 @@ class _SelectableCircleState extends State<SelectableCircleSize> {
                   color: _getBackgroundColor(index),
                 ),
                 child: Text(
-                  '${productSize[index].name}',
+                  '${widget.productSize[index].name}',
                   style: _getTextStyle(index),
                 ),
               ),

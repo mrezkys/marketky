@@ -194,6 +194,7 @@ class _ProductDetailState extends State<ProductDetail> {
                   ),
                 ),
                 SelectableCircleColor(
+                  colorWay: product.colors,
                   margin: EdgeInsets.only(top: 12),
                 ),
               ],
@@ -219,6 +220,7 @@ class _ProductDetailState extends State<ProductDetail> {
                   ),
                 ),
                 SelectableCircleSize(
+                  productSize: product.sizes,
                   margin: EdgeInsets.only(top: 12),
                 ),
               ],

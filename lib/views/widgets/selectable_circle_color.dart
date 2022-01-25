@@ -4,20 +4,15 @@ import 'package:marketky/core/model/ColorWay.dart';
 
 class SelectableCircleColor extends StatefulWidget {
   final EdgeInsetsGeometry margin, padding;
-  SelectableCircleColor({this.margin, this.padding});
+  final List<ColorWay> colorWay;
+
+  SelectableCircleColor({@required this.colorWay, this.margin, this.padding});
 
   @override
   _SelectableCircleState createState() => _SelectableCircleState();
 }
 
 class _SelectableCircleState extends State<SelectableCircleColor> {
-  List<ColorWay> colorWay = [
-    ColorWay(name: 'black', color: Colors.black),
-    ColorWay(name: 'blueGrey', color: Colors.blueGrey[200]),
-    ColorWay(name: 'pink', color: Colors.pink[100]),
-    ColorWay(name: 'white', color: Colors.white),
-  ];
-
   int _selectedIndex;
 
   _change(index) {
@@ -35,7 +30,7 @@ class _SelectableCircleState extends State<SelectableCircleColor> {
         spacing: 20,
         runSpacing: 8,
         children: List.generate(
-          colorWay.length,
+          widget.colorWay.length,
           (index) {
             return InkWell(
               onTap: () {
@@ -47,7 +42,7 @@ class _SelectableCircleState extends State<SelectableCircleColor> {
                   width: 42,
                   height: 42,
                   decoration: BoxDecoration(
-                    color: colorWay[index].color,
+                    color: widget.colorWay[index].color,
                     borderRadius: BorderRadius.circular(100),
                     border: Border.all(
                       width: 4,
