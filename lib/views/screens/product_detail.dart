@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:marketky/constant/app_color.dart';
 import 'package:marketky/core/model/Product.dart';
+import 'package:marketky/views/screens/image_viewer.dart';
 import 'package:marketky/views/screens/reviews_page.dart';
 import 'package:marketky/views/widgets/custom_app_bar.dart';
 import 'package:marketky/views/widgets/modals/add_to_cart_modal.dart';
@@ -90,18 +91,27 @@ class _ProductDetailState extends State<ProductDetail> {
             alignment: Alignment.topCenter,
             children: [
               // product image
-              Container(
-                width: MediaQuery.of(context).size.width,
-                height: 310,
-                color: Colors.white,
-                child: PageView(
-                  physics: BouncingScrollPhysics(),
-                  controller: productImageSlider,
-                  children: List.generate(
-                    product.image.length,
-                    (index) => Image.asset(
-                      product.image[index],
-                      fit: BoxFit.cover,
+              GestureDetector(
+                onTap: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) => ImageViewer(imageUrl: product.image),
+                    ),
+                  );
+                },
+                child: Container(
+                  width: MediaQuery.of(context).size.width,
+                  height: 310,
+                  color: Colors.white,
+                  child: PageView(
+                    physics: BouncingScrollPhysics(),
+                    controller: productImageSlider,
+                    children: List.generate(
+                      product.image.length,
+                      (index) => Image.asset(
+                        product.image[index],
+                        fit: BoxFit.cover,
+                      ),
                     ),
                   ),
                 ),
@@ -124,7 +134,7 @@ class _ProductDetailState extends State<ProductDetail> {
                 bottom: 16,
                 child: SmoothPageIndicator(
                   controller: productImageSlider,
-                  count: 2,
+                  count: product.image.length,
                   effect: ExpandingDotsEffect(
                     dotColor: AppColor.primary.withOpacity(0.2),
                     activeDotColor: AppColor.primary.withOpacity(0.2),
