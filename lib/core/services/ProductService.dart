@@ -143,7 +143,143 @@ var productRawData = [
       },
     ]
   },
+
   // 3
+  {
+    'image': [
+      'assets/images/nikehoodie.jpg',
+      'assets/images/nikeblack.jpg',
+    ],
+    'name': "Nike Sportswear Swoosh",
+    'price': 849000,
+    'rating': 4.0,
+    'description': 'Bringing a new look to the Waffle sneaker family, the Nike Waffle One balances everything you love about heritage Nike running with fresh innovations.',
+    'store_name': 'Nike Indonesia',
+    'colors': [
+      {
+        'name': 'black',
+        'color': Colors.black,
+      },
+      {
+        'name': 'blueGrey',
+        'color': Colors.blueGrey[200],
+      },
+      {
+        'name': 'pink',
+        'color': Colors.pink[100],
+      },
+      {
+        'name': 'white',
+        'color': Colors.white,
+      },
+    ],
+    'sizes': [
+      {
+        'size': '36.0',
+        'name': '36',
+      },
+      {
+        'size': '37.0',
+        'name': '37',
+      },
+      {
+        'size': '38.0',
+        'name': '38',
+      },
+      {
+        'size': '42.0',
+        'name': '42',
+      },
+    ],
+    'reviews': [
+      {
+        'photo_url': 'assets/images/avatar1.jpg',
+        'name': 'Uchiha Sasuke',
+        'review': 'Bringing a new look to the Waffle sneaker family, the Nike Waffle One balances everything you love about heritage Nike running with fresh innovations.',
+        'rating': 4.0,
+      },
+      {
+        'photo_url': 'assets/images/avatar2.jpg',
+        'name': 'Uzumaki Naruto',
+        'review': 'Bringing a new look to the Waffle sneaker family, the Nike Waffle One balances everything you love about heritage Nike running with fresh innovations.',
+        'rating': 4.0,
+      },
+      {
+        'photo_url': 'assets/images/avatar3.jpg',
+        'name': 'Kurokooo Tetsuya',
+        'review': 'Bringing a new look to the Waffle sneaker family, the Nike Waffle One balances everything you love about heritage Nike running with fresh innovations.',
+        'rating': 4.0,
+      },
+    ]
+  },
+  // 4
+  {
+    'image': [
+      'assets/images/adidasjacket.jpg',
+      'assets/images/nikeblack.jpg',
+    ],
+    'name': "Adidas T-SHIRT R.Y.V.",
+    'price': 1900000,
+    'rating': 4.0,
+    'description': 'Bringing a new look to the Waffle sneaker family, the Nike Waffle One balances everything you love about heritage Nike running with fresh innovations.',
+    'store_name': 'Adidas Indonesia',
+    'colors': [
+      {
+        'name': 'black',
+        'color': Colors.black,
+      },
+      {
+        'name': 'blueGrey',
+        'color': Colors.blueGrey[200],
+      },
+      {
+        'name': 'pink',
+        'color': Colors.pink[100],
+      },
+      {
+        'name': 'white',
+        'color': Colors.white,
+      },
+    ],
+    'sizes': [
+      {
+        'size': '36.0',
+        'name': '36',
+      },
+      {
+        'size': '37.0',
+        'name': '37',
+      },
+      {
+        'size': '38.0',
+        'name': '38',
+      },
+      {
+        'size': '42.0',
+        'name': '42',
+      },
+    ],
+    'reviews': [
+      {
+        'photo_url': 'assets/images/avatar1.jpg',
+        'name': 'Uchiha Sasuke',
+        'review': 'Bringing a new look to the Waffle sneaker family, the Nike Waffle One balances everything you love about heritage Nike running with fresh innovations.',
+        'rating': 4.0,
+      },
+      {
+        'photo_url': 'assets/images/avatar2.jpg',
+        'name': 'Uzumaki Naruto',
+        'review': 'Bringing a new look to the Waffle sneaker family, the Nike Waffle One balances everything you love about heritage Nike running with fresh innovations.',
+        'rating': 4.0,
+      },
+      {
+        'photo_url': 'assets/images/avatar3.jpg',
+        'name': 'Kurokooo Tetsuya',
+        'review': 'Bringing a new look to the Waffle sneaker family, the Nike Waffle One balances everything you love about heritage Nike running with fresh innovations.',
+        'rating': 4.0,
+      },
+    ]
+  },
 ];
 
 var searchedProductRawData = [
