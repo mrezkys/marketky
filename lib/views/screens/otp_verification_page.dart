@@ -35,7 +35,7 @@ class _OTPVerificationPageState extends State<OTPVerificationPage> {
           Container(
             margin: EdgeInsets.only(top: 20, bottom: 8),
             child: Text(
-              'Phone number verification',
+              'Email verification',
               style: TextStyle(
                 color: AppColor.secondary,
                 fontWeight: FontWeight.w700,
