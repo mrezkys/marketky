@@ -44,6 +44,7 @@ class _CartPageState extends State<CartPage> {
           ),
         ),
       ),
+      // Checkout Button
       bottomNavigationBar: Container(
         width: MediaQuery.of(context).size.width,
         padding: EdgeInsets.all(16),
