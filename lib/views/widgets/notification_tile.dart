@@ -23,6 +23,7 @@ class NotificationTile extends StatelessWidget {
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            // Image
             Container(
               width: 46,
               height: 46,
@@ -33,14 +34,17 @@ class NotificationTile extends StatelessWidget {
               ),
               margin: EdgeInsets.only(right: 16),
             ),
+            // Info
             Expanded(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
+                  // Title
                   Text(
                     '${data.title}',
                     style: TextStyle(color: AppColor.secondary, fontFamily: 'poppins', fontWeight: FontWeight.w500),
                   ),
+                  // Description
                   Container(
                     margin: EdgeInsets.only(top: 2, bottom: 8),
                     child: Text(
@@ -48,6 +52,7 @@ class NotificationTile extends StatelessWidget {
                       style: TextStyle(color: AppColor.secondary.withOpacity(0.7), fontSize: 12),
                     ),
                   ),
+                  // Datetime
                   Row(
                     children: [
                       SvgPicture.asset('assets/icons/Time Circle.svg', color: AppColor.secondary.withOpacity(0.7)),
