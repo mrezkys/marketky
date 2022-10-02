@@ -46,7 +46,7 @@ class _ProductDetailState extends State<ProductDetail> {
               margin: EdgeInsets.only(right: 14),
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  primary: AppColor.secondary,
+                  backgroundColor: AppColor.secondary,
                   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
                   elevation: 0,
                 ),
@@ -59,7 +59,7 @@ class _ProductDetailState extends State<ProductDetail> {
                 height: 64,
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    primary: AppColor.primary,
+                    backgroundColor: AppColor.primary,
                     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
                     elevation: 0,
                   ),
@@ -284,10 +284,8 @@ class _ProductDetailState extends State<ProductDetail> {
                           style: TextStyle(color: AppColor.secondary, fontWeight: FontWeight.w600),
                         ),
                         style: ElevatedButton.styleFrom(
-                          elevation: 0,
-                          onPrimary: AppColor.primary,
+                          foregroundColor: AppColor.primary, elevation: 0, backgroundColor: AppColor.primarySoft,
                           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
-                          primary: AppColor.primarySoft,
                         ),
                       ),
                     )

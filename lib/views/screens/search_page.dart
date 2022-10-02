@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:marketky/constant/app_color.dart';
 import 'package:marketky/core/model/Search.dart';
@@ -19,7 +20,6 @@ class _SearchPageState extends State<SearchPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        brightness: Brightness.dark,
         automaticallyImplyLeading: false,
         centerTitle: false,
         backgroundColor: AppColor.primary,
@@ -56,7 +56,7 @@ class _SearchPageState extends State<SearchPage> {
               filled: true,
             ),
           ),
-        ),
+        ), systemOverlayStyle: SystemUiOverlayStyle.light,
       ),
       body: ListView(
         shrinkWrap: true,
@@ -102,8 +102,7 @@ class _SearchPageState extends State<SearchPage> {
                     style: TextStyle(color: AppColor.secondary.withOpacity(0.5)),
                   ),
                   style: ElevatedButton.styleFrom(
-                    primary: AppColor.primarySoft,
-                    onPrimary: AppColor.primary.withOpacity(0.3),
+                    foregroundColor: AppColor.primary.withOpacity(0.3), backgroundColor: AppColor.primarySoft,
                     elevation: 0,
                     shadowColor: Colors.transparent,
                     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(0)),

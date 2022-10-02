@@ -31,10 +31,8 @@ class CustomAppBar extends StatelessWidget {
               child: ElevatedButton(
                 onPressed: leftOnTap,
                 style: ElevatedButton.styleFrom(
-                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
-                  primary: AppColor.primarySoft,
+                  foregroundColor: AppColor.primary, shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)), backgroundColor: AppColor.primarySoft,
                   elevation: 0,
-                  onPrimary: AppColor.primary,
                   padding: EdgeInsets.all(8),
                 ),
                 child: leftIcon,
@@ -56,10 +54,8 @@ class CustomAppBar extends StatelessWidget {
               child: ElevatedButton(
                 onPressed: rightOnTap,
                 style: ElevatedButton.styleFrom(
-                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
-                  primary: AppColor.primarySoft,
+                  foregroundColor: AppColor.primary, shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)), backgroundColor: AppColor.primarySoft,
                   elevation: 0,
-                  onPrimary: AppColor.primary,
                   padding: EdgeInsets.all(8),
                 ),
                 child: rightIcon,

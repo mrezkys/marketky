@@ -7,12 +7,21 @@ import 'package:pecahan_rupiah/pecahan_rupiah.dart';
 
 class ItemCard extends StatelessWidget {
   final Product product;
-  ItemCard({@required this.product});
+  final Color titleColor;
+  final Color priceColor;
+
+  ItemCard({
+    @required this.product,
+    this.titleColor = Colors.black,
+    this.priceColor = AppColor.primary,
+  });
+
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        Navigator.of(context).push(MaterialPageRoute(builder: (context) => ProductDetail(product: product)));
+        Navigator.of(context).push(MaterialPageRoute(
+            builder: (context) => ProductDetail(product: product)));
       },
       child: Container(
         width: MediaQuery.of(context).size.width / 2 - 16 - 8,
@@ -28,7 +37,8 @@ class ItemCard extends StatelessWidget {
               alignment: Alignment.topLeft,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(16),
-                image: DecorationImage(image: AssetImage(product.image[0]), fit: BoxFit.cover),
+                image: DecorationImage(
+                    image: AssetImage(product.image[0]), fit: BoxFit.cover),
               ),
               child: RatingTag(value: product.rating),
             ),
@@ -45,6 +55,7 @@ class ItemCard extends StatelessWidget {
                     style: TextStyle(
                       fontSize: 12,
                       fontWeight: FontWeight.w700,
+                      color: titleColor,
                     ),
                   ),
                   Container(
@@ -55,7 +66,7 @@ class ItemCard extends StatelessWidget {
                         fontSize: 16,
                         fontWeight: FontWeight.w700,
                         fontFamily: 'Poppins',
-                        color: AppColor.primary,
+                        color: priceColor,
                       ),
                     ),
                   ),

@@ -53,10 +53,8 @@ class _AddToCartModalState extends State<AddToCartModal> {
                     onPressed: () {},
                     child: Icon(Icons.remove, size: 20, color: Colors.black),
                     style: ElevatedButton.styleFrom(
-                      shape: CircleBorder(),
+                      foregroundColor: AppColor.primary, shape: CircleBorder(), backgroundColor: AppColor.border,
                       padding: EdgeInsets.all(0),
-                      primary: AppColor.border,
-                      onPrimary: AppColor.primary,
                     ),
                   ),
                   Container(
@@ -70,10 +68,8 @@ class _AddToCartModalState extends State<AddToCartModal> {
                     onPressed: () {},
                     child: Icon(Icons.add, size: 20, color: Colors.black),
                     style: ElevatedButton.styleFrom(
-                      shape: CircleBorder(),
+                      foregroundColor: AppColor.primary, shape: CircleBorder(), backgroundColor: AppColor.border,
                       padding: EdgeInsets.all(0),
-                      primary: AppColor.border,
-                      onPrimary: AppColor.primary,
                     ),
                   ),
                 ],
@@ -118,7 +114,7 @@ class _AddToCartModalState extends State<AddToCartModal> {
                       style: TextStyle(fontSize: 14, fontWeight: FontWeight.w600, fontFamily: 'poppins'),
                     ),
                     style: ElevatedButton.styleFrom(
-                      primary: AppColor.primary,
+                      backgroundColor: AppColor.primary,
                       padding: EdgeInsets.symmetric(vertical: 15),
                       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
                       elevation: 0,

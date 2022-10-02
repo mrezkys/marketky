@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:marketky/constant/app_color.dart';
 import 'package:marketky/views/screens/page_switcher.dart';
@@ -11,7 +12,6 @@ class EmptyCartPage extends StatelessWidget {
         automaticallyImplyLeading: false,
         centerTitle: true,
         backgroundColor: Colors.white,
-        brightness: Brightness.dark,
         elevation: 0,
         title: Column(
           children: [
@@ -24,7 +24,7 @@ class EmptyCartPage extends StatelessWidget {
             Navigator.of(context).pop();
           },
           icon: SvgPicture.asset('assets/icons/Arrow-left.svg'),
-        ),
+        ), systemOverlayStyle: SystemUiOverlayStyle.light,
       ),
       body: Container(
         width: MediaQuery.of(context).size.width,
@@ -65,10 +65,8 @@ class EmptyCartPage extends StatelessWidget {
                 style: TextStyle(fontWeight: FontWeight.w600, color: AppColor.secondary),
               ),
               style: ElevatedButton.styleFrom(
-                padding: EdgeInsets.symmetric(horizontal: 32, vertical: 16),
-                primary: AppColor.border,
+                foregroundColor: AppColor.primary, padding: EdgeInsets.symmetric(horizontal: 32, vertical: 16), backgroundColor: AppColor.border,
                 elevation: 0,
-                onPrimary: AppColor.primary,
                 shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
                 shadowColor: Colors.transparent,
               ),

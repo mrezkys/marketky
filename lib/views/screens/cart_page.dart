@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:marketky/constant/app_color.dart';
 import 'package:marketky/core/model/Cart.dart';
@@ -21,12 +22,17 @@ class _CartPageState extends State<CartPage> {
         automaticallyImplyLeading: false,
         centerTitle: true,
         backgroundColor: Colors.white,
-        brightness: Brightness.dark,
         elevation: 0,
         title: Column(
           children: [
-            Text('Your Cart', style: TextStyle(color: Colors.black, fontSize: 14, fontWeight: FontWeight.w600)),
-            Text('3 items', style: TextStyle(fontSize: 10, color: Colors.black.withOpacity(0.7))),
+            Text('Your Cart',
+                style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 14,
+                    fontWeight: FontWeight.w600)),
+            Text('3 items',
+                style: TextStyle(
+                    fontSize: 10, color: Colors.black.withOpacity(0.7))),
           ],
         ),
         leading: IconButton(
@@ -43,15 +49,18 @@ class _CartPageState extends State<CartPage> {
             color: AppColor.primarySoft,
           ),
         ),
+        systemOverlayStyle: SystemUiOverlayStyle.light,
       ),
       // Checkout Button
       bottomNavigationBar: Container(
         width: MediaQuery.of(context).size.width,
         padding: EdgeInsets.all(16),
-        decoration: BoxDecoration(border: Border(top: BorderSide(color: AppColor.border, width: 1))),
+        decoration: BoxDecoration(
+            border: Border(top: BorderSide(color: AppColor.border, width: 1))),
         child: ElevatedButton(
           onPressed: () {
-            Navigator.of(context).push(MaterialPageRoute(builder: (context) => OrderSuccessPage()));
+            Navigator.of(context).push(
+                MaterialPageRoute(builder: (context) => OrderSuccessPage()));
           },
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -60,7 +69,11 @@ class _CartPageState extends State<CartPage> {
                 flex: 6,
                 child: Text(
                   'Checkout',
-                  style: TextStyle(color: Colors.white, fontWeight: FontWeight.w600, fontSize: 18, fontFamily: 'poppins'),
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.w600,
+                      fontSize: 18,
+                      fontFamily: 'poppins'),
                 ),
               ),
               Container(
@@ -72,15 +85,20 @@ class _CartPageState extends State<CartPage> {
                 flex: 6,
                 child: Text(
                   'Rp 10,429,000',
-                  style: TextStyle(color: Colors.white, fontWeight: FontWeight.w500, fontSize: 14, fontFamily: 'poppins'),
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.w500,
+                      fontSize: 14,
+                      fontFamily: 'poppins'),
                 ),
               ),
             ],
           ),
           style: ElevatedButton.styleFrom(
             padding: EdgeInsets.symmetric(horizontal: 36, vertical: 18),
-            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
-            primary: AppColor.primary,
+            backgroundColor: AppColor.primary,
+            shape:
+                RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
             elevation: 0,
           ),
         ),
@@ -121,7 +139,11 @@ class _CartPageState extends State<CartPage> {
                     children: [
                       Text(
                         'Shipping information',
-                        style: TextStyle(fontSize: 14, fontFamily: 'poppins', fontWeight: FontWeight.w600, color: AppColor.secondary),
+                        style: TextStyle(
+                            fontSize: 14,
+                            fontFamily: 'poppins',
+                            fontWeight: FontWeight.w600,
+                            color: AppColor.secondary),
                       ),
                       ElevatedButton(
                         onPressed: () {},
@@ -131,9 +153,9 @@ class _CartPageState extends State<CartPage> {
                           color: AppColor.secondary,
                         ),
                         style: ElevatedButton.styleFrom(
+                          foregroundColor: AppColor.primary,
                           shape: CircleBorder(),
-                          primary: AppColor.border,
-                          onPrimary: AppColor.primary,
+                          backgroundColor: AppColor.border,
                           elevation: 0,
                           padding: EdgeInsets.all(0),
                         ),
@@ -148,7 +170,8 @@ class _CartPageState extends State<CartPage> {
                     children: [
                       Container(
                         margin: EdgeInsets.only(right: 12),
-                        child: SvgPicture.asset('assets/icons/Profile.svg', width: 18),
+                        child: SvgPicture.asset('assets/icons/Profile.svg',
+                            width: 18),
                       ),
                       Expanded(
                         child: Text(
@@ -169,7 +192,8 @@ class _CartPageState extends State<CartPage> {
                     children: [
                       Container(
                         margin: EdgeInsets.only(right: 12),
-                        child: SvgPicture.asset('assets/icons/Home.svg', width: 18),
+                        child: SvgPicture.asset('assets/icons/Home.svg',
+                            width: 18),
                       ),
                       Expanded(
                         child: Text(
@@ -189,7 +213,8 @@ class _CartPageState extends State<CartPage> {
                     children: [
                       Container(
                         margin: EdgeInsets.only(right: 12),
-                        child: SvgPicture.asset('assets/icons/Profile.svg', width: 18),
+                        child: SvgPicture.asset('assets/icons/Profile.svg',
+                            width: 18),
                       ),
                       Expanded(
                         child: Text(
@@ -222,7 +247,9 @@ class _CartPageState extends State<CartPage> {
                   height: 60,
                   decoration: BoxDecoration(
                     color: AppColor.primarySoft,
-                    borderRadius: BorderRadius.only(topLeft: Radius.circular(20), topRight: Radius.circular(20)),
+                    borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(20),
+                        topRight: Radius.circular(20)),
                   ),
                   // Content
                   child: Row(
@@ -233,17 +260,28 @@ class _CartPageState extends State<CartPage> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Text('Select Shipping method', style: TextStyle(color: AppColor.secondary.withOpacity(0.7), fontSize: 10)),
-                          Text('Official Shipping', style: TextStyle(color: AppColor.secondary, fontWeight: FontWeight.w600, fontFamily: 'poppins')),
+                          Text('Select Shipping method',
+                              style: TextStyle(
+                                  color: AppColor.secondary.withOpacity(0.7),
+                                  fontSize: 10)),
+                          Text('Official Shipping',
+                              style: TextStyle(
+                                  color: AppColor.secondary,
+                                  fontWeight: FontWeight.w600,
+                                  fontFamily: 'poppins')),
                         ],
                       ),
-                      Text('free delivery', style: TextStyle(color: AppColor.primary, fontWeight: FontWeight.w600)),
+                      Text('free delivery',
+                          style: TextStyle(
+                              color: AppColor.primary,
+                              fontWeight: FontWeight.w600)),
                     ],
                   ),
                 ),
                 Container(
                   width: MediaQuery.of(context).size.width,
-                  padding: EdgeInsets.only(left: 16, right: 16, top: 16, bottom: 20),
+                  padding:
+                      EdgeInsets.only(left: 16, right: 16, top: 16, bottom: 20),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
@@ -255,7 +293,9 @@ class _CartPageState extends State<CartPage> {
                               flex: 4,
                               child: Text(
                                 'Shipping',
-                                style: TextStyle(fontWeight: FontWeight.w600, color: AppColor.secondary),
+                                style: TextStyle(
+                                    fontWeight: FontWeight.w600,
+                                    color: AppColor.secondary),
                               ),
                             ),
                             Expanded(
@@ -263,7 +303,8 @@ class _CartPageState extends State<CartPage> {
                               child: Text(
                                 '3-5 Days',
                                 textAlign: TextAlign.center,
-                                style: TextStyle(color: AppColor.secondary.withOpacity(0.7)),
+                                style: TextStyle(
+                                    color: AppColor.secondary.withOpacity(0.7)),
                               ),
                             ),
                             Expanded(
@@ -271,7 +312,9 @@ class _CartPageState extends State<CartPage> {
                               child: Text(
                                 'Rp 0',
                                 textAlign: TextAlign.end,
-                                style: TextStyle(fontWeight: FontWeight.w600, color: AppColor.primary),
+                                style: TextStyle(
+                                    fontWeight: FontWeight.w600,
+                                    color: AppColor.primary),
                               ),
                             ),
                           ],
@@ -284,7 +327,9 @@ class _CartPageState extends State<CartPage> {
                               flex: 4,
                               child: Text(
                                 'Subtotal',
-                                style: TextStyle(fontWeight: FontWeight.w600, color: AppColor.secondary),
+                                style: TextStyle(
+                                    fontWeight: FontWeight.w600,
+                                    color: AppColor.secondary),
                               ),
                             ),
                             Expanded(
@@ -292,7 +337,8 @@ class _CartPageState extends State<CartPage> {
                               child: Text(
                                 '4 Items',
                                 textAlign: TextAlign.center,
-                                style: TextStyle(color: AppColor.secondary.withOpacity(0.7)),
+                                style: TextStyle(
+                                    color: AppColor.secondary.withOpacity(0.7)),
                               ),
                             ),
                             Expanded(
@@ -300,7 +346,9 @@ class _CartPageState extends State<CartPage> {
                               child: Text(
                                 'Rp 1,429,000',
                                 textAlign: TextAlign.end,
-                                style: TextStyle(fontWeight: FontWeight.w600, color: AppColor.primary),
+                                style: TextStyle(
+                                    fontWeight: FontWeight.w600,
+                                    color: AppColor.primary),
                               ),
                             ),
                           ],

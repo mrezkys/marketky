@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:marketky/constant/app_color.dart';
 import 'package:marketky/views/screens/page_switcher.dart';
@@ -14,7 +15,6 @@ class _OTPVerificationPageState extends State<OTPVerificationPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        brightness: Brightness.dark,
         automaticallyImplyLeading: false,
         centerTitle: true,
         backgroundColor: Colors.white,
@@ -25,7 +25,7 @@ class _OTPVerificationPageState extends State<OTPVerificationPage> {
             Navigator.of(context).pop();
           },
           icon: SvgPicture.asset('assets/icons/Arrow-left.svg'),
-        ),
+        ), systemOverlayStyle: SystemUiOverlayStyle.light,
       ),
       body: ListView(
         shrinkWrap: true,
@@ -87,9 +87,8 @@ class _OTPVerificationPageState extends State<OTPVerificationPage> {
                 style: TextStyle(color: Colors.white, fontWeight: FontWeight.w600, fontSize: 18, fontFamily: 'poppins'),
               ),
               style: ElevatedButton.styleFrom(
-                padding: EdgeInsets.symmetric(horizontal: 36, vertical: 18),
+                padding: EdgeInsets.symmetric(horizontal: 36, vertical: 18), backgroundColor: AppColor.primary,
                 shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
-                primary: AppColor.primary,
                 elevation: 0,
                 shadowColor: Colors.transparent,
               ),
@@ -105,12 +104,10 @@ class _OTPVerificationPageState extends State<OTPVerificationPage> {
               ),
             ),
             style: ElevatedButton.styleFrom(
-              padding: EdgeInsets.symmetric(horizontal: 36, vertical: 18),
+              foregroundColor: AppColor.primary, padding: EdgeInsets.symmetric(horizontal: 36, vertical: 18), backgroundColor: AppColor.primarySoft,
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
-              primary: AppColor.primarySoft,
               elevation: 0,
               shadowColor: Colors.transparent,
-              onPrimary: AppColor.primary,
             ),
           ),
         ],

@@ -60,7 +60,7 @@ class UpdateCardWidget extends StatelessWidget {
                   onPressed: () {},
                   child: Text('follow', style: TextStyle(fontWeight: FontWeight.w600, fontFamily: 'poppins', fontSize: 12)),
                   style: TextButton.styleFrom(
-                    primary: AppColor.primary,
+                    foregroundColor: AppColor.primary,
                   ),
                 ),
               ],

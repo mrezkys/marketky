@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:marketky/constant/app_color.dart';
 import 'package:marketky/core/model/Message.dart';
@@ -19,7 +20,6 @@ class _MessagePageState extends State<MessagePage> {
         automaticallyImplyLeading: false,
         centerTitle: true,
         backgroundColor: Colors.white,
-        brightness: Brightness.dark,
         elevation: 0,
         title: Column(
           children: [
@@ -40,7 +40,7 @@ class _MessagePageState extends State<MessagePage> {
             width: MediaQuery.of(context).size.width,
             color: AppColor.primarySoft,
           ),
-        ),
+        ), systemOverlayStyle: SystemUiOverlayStyle.light,
       ),
       body: ListView(
         shrinkWrap: true,
