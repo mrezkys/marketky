@@ -116,8 +116,7 @@ class _ReviewsPageState extends State<ReviewsPage> with TickerProviderStateMixin
                       style: TextStyle(color: (_selectedTab == 0) ? Colors.white : Colors.grey),
                     ),
                     style: ElevatedButton.styleFrom(
-                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
-                      primary: (_selectedTab == 0) ? AppColor.primary : Colors.white,
+                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)), backgroundColor: (_selectedTab == 0) ? AppColor.primary : Colors.white,
                     ),
                   ),
                   ElevatedButton(
@@ -140,12 +139,10 @@ class _ReviewsPageState extends State<ReviewsPage> with TickerProviderStateMixin
                       ],
                     ),
                     style: ElevatedButton.styleFrom(
-                      shape: RoundedRectangleBorder(
+                      foregroundColor: AppColor.border, shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(8),
                         side: BorderSide(color: AppColor.border, width: 1),
-                      ),
-                      primary: (_selectedTab == 1) ? AppColor.primary : Colors.white,
-                      onPrimary: AppColor.border,
+                      ), backgroundColor: (_selectedTab == 1) ? AppColor.primary : Colors.white,
                       elevation: 0,
                     ),
                   ),
@@ -169,12 +166,10 @@ class _ReviewsPageState extends State<ReviewsPage> with TickerProviderStateMixin
                       ],
                     ),
                     style: ElevatedButton.styleFrom(
-                      shape: RoundedRectangleBorder(
+                      foregroundColor: AppColor.border, shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(8),
                         side: BorderSide(color: AppColor.border, width: 1),
-                      ),
-                      primary: (_selectedTab == 2) ? AppColor.primary : Colors.white,
-                      onPrimary: AppColor.border,
+                      ), backgroundColor: (_selectedTab == 2) ? AppColor.primary : Colors.white,
                       elevation: 0,
                     ),
                   ),
@@ -198,12 +193,10 @@ class _ReviewsPageState extends State<ReviewsPage> with TickerProviderStateMixin
                       ],
                     ),
                     style: ElevatedButton.styleFrom(
-                      shape: RoundedRectangleBorder(
+                      foregroundColor: AppColor.border, shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(8),
                         side: BorderSide(color: AppColor.border, width: 1),
-                      ),
-                      primary: (_selectedTab == 3) ? AppColor.primary : Colors.white,
-                      onPrimary: AppColor.border,
+                      ), backgroundColor: (_selectedTab == 3) ? AppColor.primary : Colors.white,
                       elevation: 0,
                     ),
                   ),
@@ -227,12 +220,10 @@ class _ReviewsPageState extends State<ReviewsPage> with TickerProviderStateMixin
                       ],
                     ),
                     style: ElevatedButton.styleFrom(
-                      shape: RoundedRectangleBorder(
+                      foregroundColor: AppColor.border, shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(8),
                         side: BorderSide(color: AppColor.border, width: 1),
-                      ),
-                      primary: (_selectedTab == 4) ? AppColor.primary : Colors.white,
-                      onPrimary: AppColor.border,
+                      ), backgroundColor: (_selectedTab == 4) ? AppColor.primary : Colors.white,
                       elevation: 0,
                     ),
                   ),
@@ -256,12 +247,10 @@ class _ReviewsPageState extends State<ReviewsPage> with TickerProviderStateMixin
                       ],
                     ),
                     style: ElevatedButton.styleFrom(
-                      shape: RoundedRectangleBorder(
+                      foregroundColor: AppColor.border, shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(8),
                         side: BorderSide(color: AppColor.border, width: 1),
-                      ),
-                      primary: (_selectedTab == 5) ? AppColor.primary : Colors.white,
-                      onPrimary: AppColor.border,
+                      ), backgroundColor: (_selectedTab == 5) ? AppColor.primary : Colors.white,
                       elevation: 0,
                     ),
                   ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
@@ -18,7 +19,6 @@ class _ImageViewerState extends State<ImageViewer> {
       backgroundColor: Colors.black,
       extendBodyBehindAppBar: true,
       appBar: AppBar(
-        brightness: Brightness.dark,
         backgroundColor: Colors.transparent,
         elevation: 0,
         leading: IconButton(
@@ -29,7 +29,7 @@ class _ImageViewerState extends State<ImageViewer> {
             'assets/icons/Arrow-left.svg',
             color: Colors.white,
           ),
-        ),
+        ), systemOverlayStyle: SystemUiOverlayStyle.light,
       ),
       body: Stack(
         children: [

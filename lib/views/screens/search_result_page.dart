@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:marketky/constant/app_color.dart';
 import 'package:marketky/core/model/Product.dart';
@@ -28,7 +29,6 @@ class _SearchResultPageState extends State<SearchResultPage> with TickerProvider
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        brightness: Brightness.dark,
         automaticallyImplyLeading: false,
         centerTitle: false,
         backgroundColor: AppColor.primary,
@@ -105,7 +105,7 @@ class _SearchResultPageState extends State<SearchResultPage> with TickerProvider
               ],
             ),
           ),
-        ),
+        ), systemOverlayStyle: SystemUiOverlayStyle.light,
       ),
       body: TabBarView(
         controller: tabController,

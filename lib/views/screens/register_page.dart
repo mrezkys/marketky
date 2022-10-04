@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:marketky/constant/app_color.dart';
 import 'package:marketky/views/screens/login_page.dart';
@@ -14,7 +15,6 @@ class _LoginPageState extends State<RegisterPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        brightness: Brightness.dark,
         automaticallyImplyLeading: false,
         centerTitle: true,
         backgroundColor: Colors.white,
@@ -25,7 +25,7 @@ class _LoginPageState extends State<RegisterPage> {
             Navigator.of(context).pop();
           },
           icon: SvgPicture.asset('assets/icons/Arrow-left.svg'),
-        ),
+        ), systemOverlayStyle: SystemUiOverlayStyle.light,
       ),
       bottomNavigationBar: Container(
         width: MediaQuery.of(context).size.width,
@@ -36,7 +36,7 @@ class _LoginPageState extends State<RegisterPage> {
             Navigator.of(context).push(MaterialPageRoute(builder: (context) => LoginPage()));
           },
           style: TextButton.styleFrom(
-            primary: AppColor.secondary.withOpacity(0.1),
+            foregroundColor: AppColor.secondary.withOpacity(0.1),
           ),
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -226,9 +226,8 @@ class _LoginPageState extends State<RegisterPage> {
               style: TextStyle(color: Colors.white, fontWeight: FontWeight.w600, fontSize: 18, fontFamily: 'poppins'),
             ),
             style: ElevatedButton.styleFrom(
-              padding: EdgeInsets.symmetric(horizontal: 36, vertical: 18),
+              padding: EdgeInsets.symmetric(horizontal: 36, vertical: 18), backgroundColor: AppColor.primary,
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
-              primary: AppColor.primary,
               elevation: 0,
               shadowColor: Colors.transparent,
             ),
@@ -263,12 +262,10 @@ class _LoginPageState extends State<RegisterPage> {
               ],
             ),
             style: ElevatedButton.styleFrom(
-              padding: EdgeInsets.symmetric(horizontal: 36, vertical: 12),
+              foregroundColor: AppColor.primary, padding: EdgeInsets.symmetric(horizontal: 36, vertical: 12), backgroundColor: AppColor.primarySoft,
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
-              primary: AppColor.primarySoft,
               elevation: 0,
               shadowColor: Colors.transparent,
-              onPrimary: AppColor.primary,
             ),
           ),
         ],

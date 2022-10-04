@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:marketky/constant/app_color.dart';
 import 'package:marketky/views/screens/cart_page.dart';
@@ -27,7 +28,6 @@ class _MainAppBarState extends State<MainAppBar> {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      brightness: Brightness.dark,
       automaticallyImplyLeading: false,
       centerTitle: false,
       backgroundColor: AppColor.primary,
@@ -66,7 +66,7 @@ class _MainAppBarState extends State<MainAppBar> {
             ),
           ),
         ],
-      ),
+      ), systemOverlayStyle: SystemUiOverlayStyle.light,
     );
   }
 }

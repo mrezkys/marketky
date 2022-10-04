@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:marketky/constant/app_color.dart';
 import 'package:marketky/core/model/Message.dart';
@@ -21,7 +22,6 @@ class _MessageDetailPageState extends State<MessageDetailPage> {
         resizeToAvoidBottomInset: false,
         appBar: AppBar(
           automaticallyImplyLeading: false,
-          brightness: Brightness.dark,
           centerTitle: false,
           backgroundColor: Colors.white,
           elevation: 0,
@@ -56,7 +56,7 @@ class _MessageDetailPageState extends State<MessageDetailPage> {
               width: MediaQuery.of(context).size.width,
               color: AppColor.primarySoft,
             ),
-          ),
+          ), systemOverlayStyle: SystemUiOverlayStyle.light,
         ),
         body: Column(
           children: [
@@ -140,7 +140,7 @@ class _MessageDetailPageState extends State<MessageDetailPage> {
                       onPressed: () {},
                       child: Icon(Icons.send_rounded, color: Colors.white, size: 18),
                       style: ElevatedButton.styleFrom(
-                        primary: AppColor.primary,
+                        backgroundColor: AppColor.primary,
                         padding: EdgeInsets.all(0),
                         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
                         shadowColor: Colors.transparent,

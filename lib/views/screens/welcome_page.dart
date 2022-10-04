@@ -55,9 +55,8 @@ class WelcomePage extends StatelessWidget {
                   style: TextStyle(color: Colors.white, fontWeight: FontWeight.w600, fontSize: 18, fontFamily: 'poppins'),
                 ),
                 style: ElevatedButton.styleFrom(
-                  padding: EdgeInsets.symmetric(horizontal: 36, vertical: 18),
+                  padding: EdgeInsets.symmetric(horizontal: 36, vertical: 18), backgroundColor: AppColor.primary,
                   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
-                  primary: AppColor.primary,
                   elevation: 0,
                   shadowColor: Colors.transparent,
                 ),
